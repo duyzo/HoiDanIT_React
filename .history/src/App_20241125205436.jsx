@@ -3,9 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
-let MyComponent = () => {
-  return <div>MyComponent</div>;
-}
+let M
 
 
 
@@ -23,7 +21,6 @@ function App() {
         </a>
       </div>
       <h1>MR DUY DZ</h1>
-      <MyComponent/>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
