@@ -5,7 +5,6 @@ import "./App.css";
 import MyComponent from "./MyComponent/Mycomponent";
 import { SecondComponent } from "./MyComponent/SecondComponent";
 
-
 function App() {
   const [count, setCount] = useState(0);
 
@@ -20,8 +19,8 @@ function App() {
         </a>
       </div>
       <h1>MR DUY DZ</h1>
-      <MyComponent/>
-      <SecondComponent/>
+      <MyComponent />
+      <SecondComponent />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
