@@ -8,7 +8,7 @@ let DataTodoList = (props) => {
             {dataTodo.map((item,index)=> {
               return (
               <div className="task" key = {index}>
-                <p>{item}</p>
+                <p>{JSON.stringify(dataTodo)}</p>
                 <button>Delete</button>
               </div>)
             })
