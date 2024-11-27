@@ -5,7 +5,7 @@ let AddTodo = (props) => {
   
   return (
     <>
-      <input type="text" id='add_new' placeholder="Add a new task" />
+      <input type="text" id='add_new' placeholder="Add a new task" onChange={(event)=>{console.log(event.target.value)}} />
       <button onClick={TestFunction} >Add</button>
     </>
   );
