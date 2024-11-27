@@ -10,7 +10,9 @@ function App() {
     <>
       <div>
       <h1 className="title">Todo List</h1>
-       <AddTodo/>
+       <AddTodo
+        TestFunction = {TestFunction}
+       />
       < DataTodoList
       dataTodo={dataTodo}
       />
@@ -20,6 +22,10 @@ function App() {
       </a>
     </>
   );
+}
+
+let TestFunction = () => {
+  alert("hi")
 }
 
 export default App;

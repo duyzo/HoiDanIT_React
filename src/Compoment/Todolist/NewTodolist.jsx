@@ -1,10 +1,12 @@
 import './style.css'
-let AddTodo = () => {
+let AddTodo = (props) => {
+  const {TestFunction} = props
+
+  
   return (
     <>
-   
-      <input type="text" placeholder="Add a new task" />
-      <button>Add</button>
+      <input type="text" id='add_new' placeholder="Add a new task" />
+      <button onClick={TestFunction} >Add</button>
     </>
   );
 };

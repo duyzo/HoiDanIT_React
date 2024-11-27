@@ -1,14 +1,13 @@
 import './style.css'
 
 let DataTodoList = (props) => {
-  console.log(props.dataTodo);
-  
+  const {dataTodo} = props
   return (
     <>
         <div className="todo">
-            {props.dataTodo.map((item)=> {
+            {dataTodo.map((item,index)=> {
               return (
-              <div className="task">
+              <div className="task" key = {index}>
                 <p>{item}</p>
                 <button>Delete</button>
               </div>)
