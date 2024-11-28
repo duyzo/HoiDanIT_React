@@ -1,18 +1,27 @@
 import './style.css'
 
 let DataTodoList = (props) => {
-  const {dataTodo} = props
+  const {Todolist} = props
+  
+  
   return (
     <>
         <div className="todo">
-            {dataTodo.map((item,index)=> {
-              return (
-              <div className="task" key = {index}>
-                <p>{JSON.stringify(dataTodo)}</p>
-                <button>Delete</button>
-              </div>)
-            })
-            }
+              
+              {Todolist.map((item)=>{
+                return (
+                  <>
+                  <div className="task" key = {item.id} >
+                    <p>{item.name}</p>
+                    <button>Delete</button>
+                  </div>
+                  </>
+                )
+              })}
+             
+          
+            
+            
         </div>
     </>
   );
