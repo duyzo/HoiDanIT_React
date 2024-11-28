@@ -12,10 +12,14 @@ let AddTodo = (props) => {
   
   return (
     <>
-      <input type="text" id='add_new' placeholder="Add a new task" onChange={(event)=>{handleOnchange(event.target.value)}} />
+      <input type="text" id='add_new' 
+      placeholder="Add a new task" 
+      onChange={(event)=>{handleOnchange(event.target.value)}} 
+      value={jobs}  
+      />
       <button onClick={()=>{
         AddList(jobs)
-        document.querySelector("#add_new").value = ""
+        setJobs("")
         }} 
         >Add</button>
       <div>{jobs}</div>
