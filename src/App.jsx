@@ -27,11 +27,15 @@ function App() {
       <div>
         <h1 className="title">Todo List</h1>
         <AddTodo AddList={AddList} />
+      {Todolist.length > 0 ?
         <DataTodoList Todolist={Todolist} />
-      </div>
+      :
       <a href="https://react.dev" target="_blank">
         <img src={reactLogo} className="logo react" alt="React logo" />
       </a>
+      }
+      </div>
+     
     </>
   );
 }

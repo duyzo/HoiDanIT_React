@@ -11,3 +11,9 @@
     align-items: center;
     margin-bottom: 10px;
 }
+
+.todo {
+    border: 1px solid #b0a5a5;
+    width: 500px;
+    padding: 10px;
+}
