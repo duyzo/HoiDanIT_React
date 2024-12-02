@@ -1,7 +1,7 @@
 import "./style.css";
 
 let DataTodoList = (props) => {
-  const { Todolist } = props;
+  const { Todolist,DeleteTodo } = props;
 
   return (
     <>
@@ -11,7 +11,7 @@ let DataTodoList = (props) => {
             <>
               <div className="task" key={item.id}>
                 <p>{item.name}</p>
-                <button>Delete</button>
+                <button onClick={()=>DeleteTodo(item.id)}>Delete</button>
               </div>
             </>
           );

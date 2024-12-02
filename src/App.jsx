@@ -14,6 +14,10 @@ function App() {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
+  let DeleteTodo = (key) => {
+    setTodoList(Todolist.filter(item=>item.id !== key))
+  }
+
   const AddList = (data) => {
     const handleData = {
       id: randomIntFromInterval(1, 1000),
@@ -27,8 +31,9 @@ function App() {
       <div>
         <h1 className="title">Todo List</h1>
         <AddTodo AddList={AddList} />
+
       {Todolist.length > 0 ?
-        <DataTodoList Todolist={Todolist} />
+        <DataTodoList Todolist={Todolist} DeleteTodo ={DeleteTodo} />
       :
       <a href="https://react.dev" target="_blank">
         <img src={reactLogo} className="logo react" alt="React logo" />
