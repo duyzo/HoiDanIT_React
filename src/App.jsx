@@ -18,6 +18,15 @@ function App() {
     setTodoList(Todolist.filter(item=>item.id !== key))
   }
 
+  let EditTodo = (key,value) => {console.log('hi',value);
+  let newtodo = Todolist.map(item=>{
+    if (item.id === key) item.name = value
+    return item})
+  console.log(newtodo);
+  setTodoList(newtodo)
+  
+  }
+
   const AddList = (data) => {
     const handleData = {
       id: randomIntFromInterval(1, 1000),
@@ -33,7 +42,7 @@ function App() {
         <AddTodo AddList={AddList} />
 
       {Todolist.length > 0 ?
-        <DataTodoList Todolist={Todolist} DeleteTodo ={DeleteTodo} />
+        <DataTodoList Todolist={Todolist} DeleteTodo ={DeleteTodo} EditTodo={EditTodo}/>
       :
       <a href="https://react.dev" target="_blank">
         <img src={reactLogo} className="logo react" alt="React logo" />

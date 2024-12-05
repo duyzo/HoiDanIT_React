@@ -20,6 +20,7 @@ let AddTodo = (props) => {
         value={jobs}
       />
       <button
+        className="add"
         onClick={() => {
           AddList(jobs);
           setJobs("");
