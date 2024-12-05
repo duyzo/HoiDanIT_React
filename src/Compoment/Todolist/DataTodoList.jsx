@@ -2,7 +2,7 @@ import "./style.css";
 
 let DataTodoList = (props) => {
   const { Todolist,DeleteTodo,EditTodo } = props;
-  const input = document.querySelector('input')
+  // const input = document.querySelector('input')
   return (
     <>
       <div className="todo">
@@ -12,12 +12,12 @@ let DataTodoList = (props) => {
               <div className="task" key={item.id}>
                 <p>{item.name}</p>
                 <div>
-                <button 
+                {/* <button 
                 onClick={()=>{
                   input.value = item.name
                   document.querySelector(".add").onclick = () => EditTodo(item.id,input.value)
                 }}
-                >Edit</button>
+                >Edit</button> */}
                 <button onClick={()=>DeleteTodo(item.id)}>Delete</button>
                 </div>
               </div>
