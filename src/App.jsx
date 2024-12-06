@@ -3,6 +3,8 @@ import "./App.css";
 import AddTodo from "./Compoment/Todolist/NewTodolist";
 import DataTodoList from "./Compoment/Todolist/DataTodoList";
 import { useState } from "react";
+import Header from "./layout/header";
+import Footer from "./layout/footer";
 
 function App() {
   const [Todolist, setTodoList] = useState([
@@ -15,17 +17,18 @@ function App() {
   }
 
   let DeleteTodo = (key) => {
-    setTodoList(Todolist.filter(item=>item.id !== key))
-  }
+    setTodoList(Todolist.filter((item) => item.id !== key));
+  };
 
-  let EditTodo = (key,value) => {console.log('hi',value);
-  let newtodo = Todolist.map(item=>{
-    if (item.id === key) item.name = value
-    return item})
-  console.log(newtodo);
-  setTodoList(newtodo)
-  
-  }
+  let EditTodo = (key, value) => {
+    console.log("hi", value);
+    let newtodo = Todolist.map((item) => {
+      if (item.id === key) item.name = value;
+      return item;
+    });
+    console.log(newtodo);
+    setTodoList(newtodo);
+  };
 
   const AddList = (data) => {
     const handleData = {
@@ -37,19 +40,24 @@ function App() {
 
   return (
     <>
+      <Header />
       <div>
         <h1 className="title">Todo List</h1>
         <AddTodo AddList={AddList} />
 
-      {Todolist.length > 0 ?
-        <DataTodoList Todolist={Todolist} DeleteTodo ={DeleteTodo} EditTodo={EditTodo}/>
-      :
-      <a href="https://react.dev" target="_blank">
-        <img src={reactLogo} className="logo react" alt="React logo" />
-      </a>
-      }
+        {Todolist.length > 0 ? (
+          <DataTodoList
+            Todolist={Todolist}
+            DeleteTodo={DeleteTodo}
+            EditTodo={EditTodo}
+          />
+        ) : (
+          <a href="https://react.dev" target="_blank">
+            <img src={reactLogo} className="logo react" alt="React logo" />
+          </a>
+        )}
       </div>
-     
+      <Footer />
     </>
   );
 }
