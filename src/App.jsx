@@ -5,6 +5,7 @@ import DataTodoList from "./Compoment/Todolist/DataTodoList";
 import { useState } from "react";
 import Header from "./layout/header";
 import Footer from "./layout/footer";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [Todolist, setTodoList] = useState([
@@ -57,6 +58,7 @@ function App() {
           </a>
         )}
       </div>
+      <Outlet/>
       <Footer />
     </>
   );

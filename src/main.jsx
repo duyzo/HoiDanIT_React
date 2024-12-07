@@ -11,23 +11,25 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "/users",
-    element: <UsersPage/>
-  },
-  {
-    path: "/products",
-    element: <ProductsPage/>
+    children: [
+      {
+        path: "/users",
+        element: <UsersPage />,
+      },
+      {
+        path: "/products",
+        element: <ProductsPage />,
+      },
+    ],
   },
   {
     path: "/login",
-    element: <LoginsPage/>
+    element: <LoginsPage />,
   },
   {
     path: "/register",
-    element: <RegistersPage/>
-    },
+    element: <RegistersPage />,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
