@@ -1,17 +1,17 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './layout.css'
 
 let Header = () => {
   return (
     <ul>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <Link to="/users">Users</Link>
+        <NavLink to="/users">Users</NavLink>
       </li>
       <li>
-        <Link to="/products">products</Link>
+        <NavLink to="/products">products</NavLink>
       </li>
     </ul>
   );
