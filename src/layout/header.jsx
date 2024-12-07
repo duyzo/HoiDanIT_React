@@ -1,16 +1,17 @@
+import { Link } from 'react-router-dom';
 import './layout.css'
 
 let Header = () => {
   return (
     <ul>
       <li>
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a href="/users">Users</a>
+        <Link to="/users">Users</Link>
       </li>
       <li>
-        <a href="/products">products</a>
+        <Link to="/products">products</Link>
       </li>
     </ul>
   );
