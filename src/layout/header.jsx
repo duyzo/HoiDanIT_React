@@ -1,5 +1,5 @@
-import { Link, NavLink } from 'react-router-dom';
-import './layout.css'
+import { NavLink } from "react-router-dom";
+import "./layout.css";
 
 let Header = () => {
   return (
@@ -17,4 +17,4 @@ let Header = () => {
   );
 };
 
-export default Header
+export default Header;
